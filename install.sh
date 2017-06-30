@@ -23,9 +23,6 @@ case "$(uname -s)" in
   ;;
 esac
 
-# Copy local files
-cp -Rf dotfiles-local/* ~/dotfiles-local/
-
 # Run rcm
 env RCRC=$HOME/dotfiles/rcrc rcup
 
