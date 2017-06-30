@@ -51,7 +51,7 @@ In order to execute this project you need to install:
 
 3. Execute installation
 
-     $ sudo install.sh
+     $ ./install.sh
 
 Note: Maybe you need to add execution permission over bash script
 
