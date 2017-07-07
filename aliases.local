@@ -1,3 +1,7 @@
+# BT
+alias bt="cd ~/RubymineProjects/breakthrough && rvm 2.1.4"
+
+# MDLIVE
 alias root_dir="echo -e '\033];root_dir\007' && cd ~/RubymineProjects/mdlive_development"
 
 alias dcu="root_dir && docker-compose up"
