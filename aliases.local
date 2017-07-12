@@ -2,11 +2,11 @@
 alias bt="cd ~/RubymineProjects/breakthrough && rvm 2.1.4"
 
 # MDLIVE
-alias root_dir="echo -e '\033];root_dir\007' && cd ~/RubymineProjects/mdlive_development"
+alias mdl="echo -e '\033];mdl\007' && cd ~/RubymineProjects/mdlive_development"
 
-alias dcu="root_dir && docker-compose up"
-alias dcs="root_dir && docker-compose stop"
-alias dcb="root_dir && docker-compose build"
+alias dcu="mdl && docker-compose up"
+alias dcs="mdl && docker-compose stop"
+alias dcb="mdl && docker-compose build"
 
 alias affiliation_manager="echo -e '\033];affiliation_manager\007' && cd ~/RubymineProjects/mdlive_development/services/affiliation_manager"
 alias fore="echo -e '\033];fore\007' && cd ~/RubymineProjects/mdlive_development/services/Fore"
@@ -59,7 +59,7 @@ alias patient_portal_stage="echo -e '\033];patient_portal_stage\007' && ssh pati
 alias rest_api_stage="echo -e '\033];rest_api_stage\007' && ssh rest_api_stage"
 
 function restart_docker() {
-  root_dir
+  mdl
   docker-compose stop
   docker-compose up
 }
@@ -71,14 +71,14 @@ function clean_up_docker() {
 }
 
 function prepare_database() {
-  root_dir
+  mdl
   docker-compose run stern bin/db_setup.sh
   docker exec -ti mdlivedevelopment_mdlive_1 rails runner "u = User.find_by_username 'demopatient1'; aff = u.affiliation; aff.mdlive_connect_enabled = true; aff.save"
   docker-compose run rest_api rake db:seed
 }
 
 function prepare_test_database() {
-  root_dir
+  mdl
   docker-compose run stern bin/db_setup_test.sh
   # docker-compose run stern bundle exec rake db:setup_versions RAILS_ENV=test
   # docker-compose run stern bundle exec rake db:setup RAILS_ENV=test
