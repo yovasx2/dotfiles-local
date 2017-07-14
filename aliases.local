@@ -47,6 +47,7 @@ alias provider_portal_attach="echo -e '\033];provider_attach\007' && docker atta
 alias legacy_attach="echo -e '\033];legacy_attach\007' && docker attach mdlivedevelopment_mdlive_1"
 alias stern_attach="echo -e '\033];stern_attach\007' && docker attach mdlivedevelopment_stern_1"
 alias rest_api_attach="echo -e '\033];rest_api_attach\007' && docker attach mdlivedevelopment_rest_api_1"
+alias fore_attach="echo -e '\033];fore_attach\007' && docker attach mdlivedevelopment_fore_1"
 
 alias stern_rspec="docker-compose run stern bundle exec rake spec"
 
