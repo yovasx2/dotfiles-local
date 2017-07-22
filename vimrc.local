@@ -7,6 +7,10 @@ call plug#begin('~/.vim/plugged')
 
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'vim-scripts/vim-auto-save'
+Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system
 call plug#end()
@@ -19,6 +23,8 @@ autocmd VimEnter * wincmd p
 map <C-i> :NERDTreeToggle<CR>
 
 " Close vim if NERDTree is last opened
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
 
