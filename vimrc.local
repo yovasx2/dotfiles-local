@@ -35,10 +35,6 @@ nnoremap tl :tablast<CR>
 nnoremap tm :tabm<Space>
 nnoremap tn :tabnew<CR>
 
-" Buffer navigation
-map <C-h> :bp<CR>
-map <C-l> :bn<CR>
-
 " Open CtrlP files on a new tab
 let g:ctrlp_prompt_mappings = {
       \ 'AcceptSelection("e")': ['<c-t>'],
