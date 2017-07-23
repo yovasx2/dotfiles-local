@@ -3,16 +3,13 @@ au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-
-" NERD tree will be loaded on the first invocation of NERDTreeToggle command
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
-Plug 'vim-scripts/vim-auto-save'
-Plug 'vim-airline/vim-airline'
-
-" Initialize plugin system
-call plug#end()
+  " NERD tree will be loaded on the first invocation of NERDTreeToggle command
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'leafgarland/typescript-vim'
+  Plug 'Quramy/tsuquyomi'
+  Plug 'vim-scripts/vim-auto-save'
+  Plug 'vim-airline/vim-airline'
+call plug#end() " Initialize plugin system
 
 " Toggle for NERDTree
 map <C-i> :NERDTreeToggle<CR>
@@ -26,3 +23,13 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 " Quick fix window blue highlight
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
+let g:airline#extensions#tabline#enabled = 1
+
+" Tab navigation
+map <C-h> :tabp<CR> " gT
+map <C-l> :tabn<CR> " gt
+nnoremap th :tabfirst<CR>
+nnoremap tj :tabnext<CR>
+nnoremap tk :tabprev<CR>
+nnoremap tl :tablast<CR>
+nnoremap tn :tabnew<CR>
