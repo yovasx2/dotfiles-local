@@ -24,3 +24,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
+" Quick fix window blue highlight
+hi Search cterm=NONE ctermfg=grey ctermbg=blue
+
