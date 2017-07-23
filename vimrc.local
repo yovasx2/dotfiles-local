@@ -35,3 +35,7 @@ nnoremap tl :tablast<CR>
 nnoremap tm :tabm<Space>
 nnoremap tn :tabnew<CR>
 
+" Buffer navigation
+map <C-k> :bp<CR>
+map <C-j> :bn<CR>
+
