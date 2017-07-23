@@ -26,8 +26,8 @@ hi Search cterm=NONE ctermfg=grey ctermbg=blue
 let g:airline#extensions#tabline#enabled = 1
 
 " Tab navigation
-map <C-h> :tabp<CR> " gT
-map <C-l> :tabn<CR> " gt
+map <C-k> :tabp<CR> " gT
+map <C-j> :tabn<CR> " gt
 nnoremap th :tabfirst<CR>
 nnoremap tj :tabnext<CR>
 nnoremap tk :tabprev<CR>
@@ -36,8 +36,8 @@ nnoremap tm :tabm<Space>
 nnoremap tn :tabnew<CR>
 
 " Buffer navigation
-map <C-k> :bp<CR>
-map <C-j> :bn<CR>
+map <C-h> :bp<CR>
+map <C-l> :bn<CR>
 
 " Open CtrlP files on a new tab
 let g:ctrlp_prompt_mappings = {
