@@ -10,7 +10,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
-Plug 'Valloric/YouCompleteMe'
 
 " Initialize plugin system
 call plug#end()
