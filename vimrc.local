@@ -32,5 +32,6 @@ nnoremap th :tabfirst<CR>
 nnoremap tj :tabnext<CR>
 nnoremap tk :tabprev<CR>
 nnoremap tl :tablast<CR>
-nnoremap tm  :tabm<Space>
+nnoremap tm :tabm<Space>
 nnoremap tn :tabnew<CR>
+
