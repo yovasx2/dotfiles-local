@@ -3,12 +3,12 @@ au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-  " NERD tree will be loaded on the first invocation of NERDTreeToggle command
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  Plug 'leafgarland/typescript-vim'
-  Plug 'Quramy/tsuquyomi'
-  Plug 'vim-scripts/vim-auto-save'
-  Plug 'vim-airline/vim-airline'
+" NERD tree will be loaded on the first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'vim-scripts/vim-auto-save'
+Plug 'vim-airline/vim-airline'
 call plug#end() " Initialize plugin system
 
 " Toggle for NERDTree
@@ -41,7 +41,17 @@ map <C-l> :bn<CR>
 
 " Open CtrlP files on a new tab
 let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<c-t>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-  \ }
+      \ 'AcceptSelection("e")': ['<c-t>'],
+      \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+      \ }
+
+set mouse=a
+" Delete hidden buffers
+function DeleteHiddenBuffers()
+  let tpbl=[]
+  call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+  for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+    silent execute 'bwipeout' buf
+  endfor
+endfunction
 
