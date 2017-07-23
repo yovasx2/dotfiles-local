@@ -39,3 +39,9 @@ nnoremap tn :tabnew<CR>
 map <C-k> :bp<CR>
 map <C-j> :bn<CR>
 
+" Open CtrlP files on a new tab
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': ['<c-t>'],
+  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+  \ }
+
