@@ -43,11 +43,11 @@ In order to execute this project you need to install:
 
 1. Clone the repo
 
-     $ git clone https://github.com/yovasx2/dotfiles
+     $ git clone https://github.com/yovasx2/dotfiles-local
 
 2. Move into it and install dependencies
 
-     $ cd dotfiles
+     $ cd dotfiles-local
 
 3. Execute installation
 
