@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
-Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 call plug#end() " Initialize plugin system
 
@@ -17,8 +16,6 @@ map <C-i> :NERDTreeToggle<CR>
 " Close vim if NERDTree is last opened
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
-
-let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " Quick fix window blue highlight
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
