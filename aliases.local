@@ -1,5 +1,9 @@
 # Onelogin
 alias onelogin="cd ~/onelogin"
-alias com="cd ~/onelogin/onelogin.com"
+alias mono="cd ~/onelogin/onelogin.com"
 alias prov="cd ~/onelogin/onelogin-provisioning"
+alias event="cd ~/onelogin/event-service"
+alias portal="cd ~/onelogin/portal_worker"
+alias scim="cd ~/onelogin/ScimServerImplementation && rvm use 1.9.3-p551"
+alias haproxy="cd ~/onelogin/haproxy"
 
