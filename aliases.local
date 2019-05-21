@@ -1,9 +1,15 @@
 # Onelogin
 alias onelogin="cd ~/onelogin"
+
+alias api="cd ~/onelogin/onelogin-apis"
 alias mono="cd ~/onelogin/onelogin.com"
+alias core="cd ~/onelogin/core-api"
 alias prov="cd ~/onelogin/onelogin-provisioning"
 alias event="cd ~/onelogin/event-service"
 alias portal="cd ~/onelogin/portal_worker"
-alias scim="cd ~/onelogin/ScimServerImplementation && rvm use 1.9.3-p551"
 alias haproxy="cd ~/onelogin/haproxy"
+alias fed="cd ~/onelogin/onelogin-fed"
+
+alias platform='cd ~/onelogin/platform'
+alias e2e='platform && cd e2e-tests'
 
