@@ -9,7 +9,8 @@ alias event="cd ~/onelogin/event-service"
 alias portal="cd ~/onelogin/portal_worker"
 alias haproxy="cd ~/onelogin/haproxy"
 alias fed="cd ~/onelogin/onelogin-fed"
+alias dir="cd ~/onelogin/directory-service"
 
-alias platform='cd ~/onelogin/platform'
-alias e2e='platform && cd e2e-tests'
+alias platform="cd ~/onelogin/platform"
+alias e2e="platform && cd e2e-tests"
 
