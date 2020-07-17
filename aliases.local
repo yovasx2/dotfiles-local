@@ -17,3 +17,5 @@ alias e2e="platform && cd e2e-tests"
 # befective
 alias befective="cd ~/befective"
 
+#callahealth
+alias callahealth="cd ~/callahealth"
