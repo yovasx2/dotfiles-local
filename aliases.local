@@ -18,4 +18,4 @@ alias e2e="platform && cd e2e-tests"
 alias befective="cd ~/befective"
 
 #callahealth
-alias callahealth="cd ~/callahealth"
+alias vela="cd ~/vela"
